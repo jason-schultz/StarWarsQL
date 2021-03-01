@@ -1,4 +1,10 @@
-namespace StartWarsQL.DotNetApi.GraphQL
+using GraphQL;
+using GraphQL.Types;
+using StartWarsQL.Core.Data;
+using StartWarsQL.DotNetCore.Entities;
+using StarWarsGL.DotNetApi.Types;
+
+namespace StarWarsQL.DotNetApi.GraphQL
 {
     public class StarWarsMutation : ObjectGraphType 
     {

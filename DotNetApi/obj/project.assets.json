@@ -91,6 +91,16 @@
         "runtime": {
           "lib/netcoreapp2.1/_._": {}
         }
+      },
+      "DotNetCore/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/DotNetCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DotNetCore.dll": {}
+        }
       }
     }
   },
@@ -379,10 +389,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "DotNetCore/1.0.0": {
+      "type": "project",
+      "path": "../DotNetCore/DotNetCore.csproj",
+      "msbuildProject": "../DotNetCore/DotNetCore.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "DotNetCore >= 1.0.0",
       "GraphQL >= 3.3.2"
     ]
   },
@@ -393,11 +409,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jasch\\source\\projects\\StarWarsQL\\DotNetApi\\DotNetApi.csproj",
+      "projectUniqueName": "c:\\Users\\jasch\\source\\projects\\StarWarsQL\\DotNetApi\\DotNetApi.csproj",
       "projectName": "DotNetApi",
-      "projectPath": "C:\\Users\\jasch\\source\\projects\\StarWarsQL\\DotNetApi\\DotNetApi.csproj",
+      "projectPath": "c:\\Users\\jasch\\source\\projects\\StarWarsQL\\DotNetApi\\DotNetApi.csproj",
       "packagesPath": "C:\\Users\\jasch\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jasch\\source\\projects\\StarWarsQL\\DotNetApi\\obj\\",
+      "outputPath": "c:\\Users\\jasch\\source\\projects\\StarWarsQL\\DotNetApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -417,7 +433,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "c:\\Users\\jasch\\source\\projects\\StarWarsQL\\DotNetCore\\DotNetCore.csproj": {
+              "projectPath": "c:\\Users\\jasch\\source\\projects\\StarWarsQL\\DotNetCore\\DotNetCore.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

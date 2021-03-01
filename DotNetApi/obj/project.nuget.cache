@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CS8vwewMlmwHBYkGRDO+/kNOgyBE3UrUsBwuDnJT+mNKNv0qfhP60Ibi+hiA0E/kq7bOyCnVSaxjn7Vnh/yUNw==",
+  "dgSpecHash": "IdnUVGsp+iNdFnx2kgLDE5qT3/NAUoUzc2z3+ifO2s/FjFhdpO9q8cM0yDINlbji/xJb6u1Ll6RYRrMrvwsDhw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jasch\\source\\projects\\StarWarsQL\\DotNetApi\\DotNetApi.csproj",
+  "projectFilePath": "c:\\Users\\jasch\\source\\projects\\StarWarsQL\\DotNetApi\\DotNetApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jasch\\.nuget\\packages\\graphql\\3.3.2\\graphql.3.3.2.nupkg.sha512",
     "C:\\Users\\jasch\\.nuget\\packages\\graphql-parser\\5.3.3\\graphql-parser.5.3.3.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jasch\\source\\projects\\StarWarsQL\\DotNetApi\\DotNetApi.csproj": {}
+    "c:\\Users\\jasch\\source\\projects\\StarWarsQL\\DotNetApi\\DotNetApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jasch\\source\\projects\\StarWarsQL\\DotNetApi\\DotNetApi.csproj": {
+    "c:\\Users\\jasch\\source\\projects\\StarWarsQL\\DotNetApi\\DotNetApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jasch\\source\\projects\\StarWarsQL\\DotNetApi\\DotNetApi.csproj",
+        "projectUniqueName": "c:\\Users\\jasch\\source\\projects\\StarWarsQL\\DotNetApi\\DotNetApi.csproj",
         "projectName": "DotNetApi",
-        "projectPath": "C:\\Users\\jasch\\source\\projects\\StarWarsQL\\DotNetApi\\DotNetApi.csproj",
+        "projectPath": "c:\\Users\\jasch\\source\\projects\\StarWarsQL\\DotNetApi\\DotNetApi.csproj",
         "packagesPath": "C:\\Users\\jasch\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jasch\\source\\projects\\StarWarsQL\\DotNetApi\\obj\\",
+        "outputPath": "c:\\Users\\jasch\\source\\projects\\StarWarsQL\\DotNetApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -31,7 +31,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
-            "projectReferences": {}
+            "projectReferences": {
+              "c:\\Users\\jasch\\source\\projects\\StarWarsQL\\DotNetCore\\DotNetCore.csproj": {
+                "projectPath": "c:\\Users\\jasch\\source\\projects\\StarWarsQL\\DotNetCore\\DotNetCore.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -63,6 +67,64 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "c:\\Users\\jasch\\source\\projects\\StarWarsQL\\DotNetCore\\DotNetCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\jasch\\source\\projects\\StarWarsQL\\DotNetCore\\DotNetCore.csproj",
+        "projectName": "DotNetCore",
+        "projectPath": "c:\\Users\\jasch\\source\\projects\\StarWarsQL\\DotNetCore\\DotNetCore.csproj",
+        "packagesPath": "C:\\Users\\jasch\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\jasch\\source\\projects\\StarWarsQL\\DotNetCore\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\jasch\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

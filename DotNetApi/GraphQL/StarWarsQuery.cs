@@ -1,3 +1,9 @@
+using System;
+using GraphQL;
+using GraphQL.Types;
+using StartWarsQL.Core.Data;
+using StarWarsGL.DotNetApi.Types;
+
 namespace StarWarsQL.DotNetApi.GraphQL
 {
     public class StarWarsQuery : ObjectGraphType<object>
@@ -8,7 +14,7 @@ namespace StarWarsQL.DotNetApi.GraphQL
 
             Field<CharacterInterface>("hero", resolve: context => data.GetDroidByIdAsync("3"));
             Field<HumanType>("human", 
-            arguments: new QueryArgument(
+            arguments: new QueryArguments(
                 new QueryArgument<NonNullGraphType<StringGraphType>> { Name = "id", Description = "id of human" }),
                 resolve: context => data.GetHumanByIdAsync(context.GetArgument<string>("id"))
             );
@@ -17,7 +23,7 @@ namespace StarWarsQL.DotNetApi.GraphQL
 
             FieldDelegate<DroidType>(
                 "droid",
-                arguments: new QueryArgument(
+                arguments: new QueryArguments(
                     new QueryArgument<NonNullGraphType<StringGraphType>> { Name = "id", Description = "id of the droid" }
                 ),
                 resolve: func

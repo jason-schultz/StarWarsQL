@@ -1,3 +1,10 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using StartWarsQL.DotNetCore.Entities;
+
+
 namespace StartWarsQL.Core.Data
 {
     public class StarWarsData 
@@ -51,6 +58,7 @@ namespace StartWarsQL.Core.Data
             var lookup = character.Friends;
             if (lookup != null)
             {
+                //  Apply is a reference from GraphQL but that probably shouldn't be part of Core.
                 _humans.Where(h => lookup.Contains(h.Id)).Apply(friends.Add);
                 _droids.Where(d => lookup.Contains(d.Id)).Apply(friends.Add);
             }

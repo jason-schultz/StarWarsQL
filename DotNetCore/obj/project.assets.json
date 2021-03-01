@@ -1,11 +1,11 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    ".NETCoreApp,Version=v3.1": {}
   },
   "libraries": {},
   "projectFileDependencyGroups": {
-    "net5.0": []
+    ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
     "C:\\Users\\jasch\\.nuget\\packages\\": {},
@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jasch\\source\\projects\\StarWarsQL\\Core\\Core.csproj",
-      "projectName": "Core",
-      "projectPath": "C:\\Users\\jasch\\source\\projects\\StarWarsQL\\Core\\Core.csproj",
+      "projectUniqueName": "C:\\Users\\jasch\\source\\projects\\StarWarsQL\\DotNetCore\\DotNetCore.csproj",
+      "projectName": "DotNetCore",
+      "projectPath": "C:\\Users\\jasch\\source\\projects\\StarWarsQL\\DotNetCore\\DotNetCore.csproj",
       "packagesPath": "C:\\Users\\jasch\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jasch\\source\\projects\\StarWarsQL\\Core\\obj\\",
+      "outputPath": "C:\\Users\\jasch\\source\\projects\\StarWarsQL\\DotNetCore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -29,15 +29,15 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net5.0"
+        "netcoreapp3.1"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -48,8 +48,8 @@
       }
     },
     "frameworks": {
-      "net5.0": {
-        "targetAlias": "net5.0",
+      "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "imports": [
           "net461",
           "net462",

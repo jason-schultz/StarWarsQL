@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tSu3ohB7dPGi0HF+41LyXLA4miMap+7FNp6ddilPNtsgYil23KKwmBAkRE8SFUojJJGTzQIVhY9d5nJs1mTdwQ==",
+  "dgSpecHash": "ZkL1aNVEicT4b8cu36wvs2Dn37LeO8xkahZlGQzkyYiqloqmh/yFNVeNjUVto+5z1whgl8mwZmnxsVI3PuX2Dw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jasch\\source\\projects\\StarWarsQL\\Core\\Core.csproj",
+  "projectFilePath": "c:\\Users\\jasch\\source\\projects\\StarWarsQL\\DotNetCore\\DotNetCore.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

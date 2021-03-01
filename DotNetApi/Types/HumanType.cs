@@ -1,3 +1,7 @@
+using GraphQL.Types;
+using StartWarsQL.Core.Data;
+using StartWarsQL.DotNetCore.Entities;
+
 namespace StarWarsGL.DotNetApi.Types
 {
     public class HumanType : ObjectGraphType<Human>

@@ -40,7 +40,7 @@ namespace StarWarsQL.DotNetApi
             app.UseHttpsRedirection();
 
             app.UseRouting();
-            app.UserCors();
+            app.UseCors();
 
             app.UseAuthorization();
 

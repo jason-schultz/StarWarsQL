@@ -1,3 +1,6 @@
+using GraphQL.Types;
+using StartWarsQL.DotNetCore.Entities;
+
 namespace StarWarsGL.DotNetApi.Types
 {
     public class CharacterInterface : InterfaceGraphType<StarWarsCharacter>

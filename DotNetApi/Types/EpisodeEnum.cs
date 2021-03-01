@@ -1,3 +1,5 @@
+using GraphQL.Types;
+
 namespace StarWarsGL.DotNetApi.Types
 {
     public class EpisodeEnum : EnumerationGraphType
