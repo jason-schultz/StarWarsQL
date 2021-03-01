@@ -1,0 +1,5 @@
+C:\Users\jasch\source\projects\StarWarsQL\DotNetApi\obj\Debug\netcoreapp3.1\DotNetApi.csprojAssemblyReference.cache
+C:\Users\jasch\source\projects\StarWarsQL\DotNetApi\obj\Debug\netcoreapp3.1\DotNetApi.AssemblyInfoInputs.cache
+C:\Users\jasch\source\projects\StarWarsQL\DotNetApi\obj\Debug\netcoreapp3.1\DotNetApi.AssemblyInfo.cs
+C:\Users\jasch\source\projects\StarWarsQL\DotNetApi\obj\Debug\netcoreapp3.1\DotNetApi.csproj.CoreCompileInputs.cache
+C:\Users\jasch\source\projects\StarWarsQL\DotNetApi\obj\Debug\netcoreapp3.1\DotNetApi.MvcApplicationPartsAssemblyInfo.cache
