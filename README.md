@@ -1,6 +1,6 @@
 # StarWarsQL
 
-Project to demonstrate my understanding of how to create a Full Stack application using different technologies. 
+Project to demonstrate how to create a Full Stack application using different technologies and each technology interaction with GraphQL. 
 
 Technologies used to create API:
 .NET Core Web API
