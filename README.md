@@ -4,12 +4,12 @@ Project to demonstrate how to create a Full Stack application using different te
 
 Technologies used to create API:
 .NET Core Web API
-Python + Django
 NodeJS + Express
 
 Database Technologies:
-localdb
-mongodb for Django and NodeJS apis
+mongodb (requires local mongodb installation)
+
+GraphQL used to query the data
 
 Frontend:
 React

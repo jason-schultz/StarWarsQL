@@ -51,6 +51,14 @@
             "GraphQL": {
               "target": "Package",
               "version": "[3.3.2, )"
+            },
+            "GraphQL.Server.Transports.AspNetCore.SystemTextJson": {
+              "target": "Package",
+              "version": "[4.4.1, )"
+            },
+            "GraphQL.Server.Ui.Playground": {
+              "target": "Package",
+              "version": "[4.4.1, )"
             }
           },
           "imports": [

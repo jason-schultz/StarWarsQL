@@ -50,12 +50,12 @@ namespace StartWarsQL.DotNetCore.Data
 
         public IEnumerable<StarWarsCharacter> GetHumans()
         {
-            return (IQueryable<StarWarsCharacter>)_humans;
+            return _humans;
         }
 
         public IEnumerable<StarWarsCharacter> GetDroids()
         {
-            return (IQueryable<StarWarsCharacter>)_droids;
+            return _droids;
         }
 
         public Human GetHumanById(string id) 
@@ -73,6 +73,13 @@ namespace StartWarsQL.DotNetCore.Data
             human.Id = Guid.NewGuid().ToString();
             _humans.Add(human);
             return human;
+        }
+
+        public Droid AddDroid(Droid droid)
+        {
+            droid.Id = Guid.NewGuid().ToString();
+            _droids.Add(droid);
+            return droid;
         }
     }
 }

@@ -14,5 +14,6 @@ namespace StartWarsQL.DotNetCore.Data.Interfaces
         Droid GetDroidById(string id);
         
         Human AddHuman(Human human);
+        Droid AddDroid(Droid droid);
     }
 }
