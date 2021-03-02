@@ -1,12 +1,12 @@
 using GraphQL.Types;
-using StartWarsQL.Core.Data;
 using StartWarsQL.DotNetCore.Entities;
+using StartWarsQL.DotNetCore.Logic;
 
 namespace StarWarsGL.DotNetApi.Types
 {
     public class DroidType : ObjectGraphType<Droid>
     {
-        public DroidType(StarWarsData data)
+        public DroidType(StarWarsLogic logic)
         {
             Name = "Droid";
             Description = "A mechanical creature in the Star Wars universe.";
@@ -16,7 +16,7 @@ namespace StarWarsGL.DotNetApi.Types
 
             Field<ListGraphType<CharacterInterface>>(
                 "friends",
-                resolve: context => data.GetFriends(context.Source)
+                resolve: context => logic.GetFriends(context.Source)
             );
             Field<ListGraphType<EpisodeEnum>>("appearsIn", "Which movie they appear in.");
             Field(d => d.PrimaryFunction, nullable: true).Description("The primary function of the droid.");

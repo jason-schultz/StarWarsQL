@@ -2,12 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using StartWarsQL.DotNetCore.Data.Interfaces;
 using StartWarsQL.DotNetCore.Entities;
 
 
-namespace StartWarsQL.Core.Data
+namespace StartWarsQL.DotNetCore.Data
 {
-    public class StarWarsData 
+    public class StarWarsData : IStarWarsData
     {
         private readonly List<Human> _humans = new List<Human>();
         private readonly List<Droid> _droids = new List<Droid>();
@@ -47,32 +48,24 @@ namespace StartWarsQL.Core.Data
             });
         }
 
-        public IEnumerable<StarWarsCharacter> GetFriends(StarWarsCharacter character)
+        public IEnumerable<StarWarsCharacter> GetHumans()
         {
-            if (character == null)
-            {
-                return null;
-            }
-
-            var friends = new List<StarWarsCharacter>();
-            var lookup = character.Friends;
-            if (lookup != null)
-            {
-                //  Apply is a reference from GraphQL but that probably shouldn't be part of Core.
-                _humans.Where(h => lookup.Contains(h.Id)).Apply(friends.Add);
-                _droids.Where(d => lookup.Contains(d.Id)).Apply(friends.Add);
-            }
-            return friends;
+            return (IQueryable<StarWarsCharacter>)_humans;
         }
 
-        public Task<Human> GetHumanByIdAsync(string id)
+        public IEnumerable<StarWarsCharacter> GetDroids()
         {
-            return Task.FromResult(_humans.FirstOrDefault(h => h.Id == id));
+            return (IQueryable<StarWarsCharacter>)_droids;
         }
 
-        public Task<Droid> GetDroidByIdAsync(string id)
+        public Human GetHumanById(string id) 
         {
-            return Task.FromResult(_droids.FirstOrDefault(h => h.Id == id));
+            return _humans.FirstOrDefault(h => h.Id == id);
+        }
+
+        public Droid GetDroidById(string id) 
+        {
+            return _droids.FirstOrDefault(d => d.Id == id);
         }
 
         public Human AddHuman(Human human)

@@ -1,15 +1,20 @@
 using GraphQL;
 using GraphQL.Types;
-using StartWarsQL.Core.Data;
 using StartWarsQL.DotNetCore.Entities;
+using StartWarsQL.DotNetCore.Logic.Interfaces;
 using StarWarsGL.DotNetApi.Types;
 
 namespace StarWarsQL.DotNetApi.GraphQL
 {
     public class StarWarsMutation : ObjectGraphType 
     {
-        public StarWarsMutation(StarWarsData data)
+        private readonly IStarWarsLogic _logic;
+
+        public StarWarsMutation(IStarWarsLogic logic)
         {
+
+            _logic = logic;
+
             Name = "Mutation";
 
             Field<HumanType>(
@@ -20,7 +25,7 @@ namespace StarWarsQL.DotNetApi.GraphQL
                 resolve: context =>
                 {
                     var human = context.GetArgument<Human>("human");
-                    return data.AddHuman(human);
+                    return _logic.AddHuman(human);
                 }
             );
         }

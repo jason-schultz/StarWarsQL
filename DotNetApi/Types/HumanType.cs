@@ -1,12 +1,12 @@
 using GraphQL.Types;
-using StartWarsQL.Core.Data;
 using StartWarsQL.DotNetCore.Entities;
+using StartWarsQL.DotNetCore.Logic;
 
 namespace StarWarsGL.DotNetApi.Types
 {
     public class HumanType : ObjectGraphType<Human>
     {
-        public HumanType(StarWarsData data)
+        public HumanType(StarWarsLogic logic)
         {
             Name = "Human";
 
@@ -15,7 +15,7 @@ namespace StarWarsGL.DotNetApi.Types
 
             Field<ListGraphType<CharacterInterface>>(
                 "friends",
-                resolve: context => data.GetFriends(context.Source)
+                resolve: context => logic.GetFriends(context.Source)
             );
             Field<ListGraphType<EpisodeEnum>>("appearsIn", "Which movie they appear in.");
 
