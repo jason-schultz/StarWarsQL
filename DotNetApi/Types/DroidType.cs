@@ -1,12 +1,12 @@
 using GraphQL.Types;
 using StartWarsQL.DotNetCore.Entities;
-using StartWarsQL.DotNetCore.Logic;
+using StartWarsQL.DotNetCore.Logic.Interfaces;
 
 namespace StarWarsGL.DotNetApi.Types
 {
     public class DroidType : ObjectGraphType<Droid>
     {
-        public DroidType(StarWarsLogic logic)
+        public DroidType(IStarWarsLogic logic)
         {
             Name = "Droid";
             Description = "A mechanical creature in the Star Wars universe.";

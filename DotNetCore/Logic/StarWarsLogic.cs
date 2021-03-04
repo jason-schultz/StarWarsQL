@@ -4,16 +4,17 @@ using System.Threading.Tasks;
 using StartWarsQL.DotNetCore.Data;
 using StartWarsQL.DotNetCore.Data.Interfaces;
 using StartWarsQL.DotNetCore.Entities;
+using StartWarsQL.DotNetCore.Logic.Interfaces;
 
 namespace StartWarsQL.DotNetCore.Logic
 {
-    public class StarWarsLogic
+    public class StarWarsLogic : IStarWarsLogic
     {
         //private readonly IStarWarsData _data;
         private readonly IHumanDao _humanDao;
         private readonly IDroidDao _droidDao;
 
-        public StarWarsLogic(IStarWarsData data, IHumanDao humandDao, IDroidDao droidDao)
+        public StarWarsLogic(/*IStarWarsData data,*/ IHumanDao humandDao, IDroidDao droidDao)
         {
             //_data = data;
             _humanDao = humandDao;

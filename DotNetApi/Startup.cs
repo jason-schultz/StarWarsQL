@@ -9,8 +9,12 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
 using StartWarsQL.DotNetCore.Data;
 using StartWarsQL.DotNetCore.Data.Interfaces;
+using StartWarsQL.DotNetCore.Logic;
+using StartWarsQL.DotNetCore.Logic.Interfaces;
+using StarWarsGL.DotNetApi.Types;
 using StarWarsQL.DotNetApi.GraphQL;
 
 namespace StarWarsQL.DotNetApi
@@ -30,10 +34,22 @@ namespace StarWarsQL.DotNetApi
             //  Add data as a singleton because we only want one instance of the data
             //services.AddDbContext<LocalSqlDb>(opts => opts.UseSqlServer(Configuration.GetConnectionString("SQLLocalDb")));
             services.Configure<MongoDbSettings>(Configuration.GetSection(nameof(MongoDbSettings)));
-            services.AddSingleton<IStarWarsData, StarWarsData>();
+            services.AddSingleton<IMongoDbSettings>(sp => sp.GetRequiredService<IOptions<MongoDbSettings>>().Value);
+            //services.AddSingleton<IStarWarsData, StarWarsData>();
+            services.AddScoped<IStarWarsLogic, StarWarsLogic>();
+            services.AddScoped<IDroidDao, DroidDao>();
+            services.AddScoped<IHumanDao, HumanDao>();
 
+            services.AddScoped<HumanType>();
+            services.AddScoped<DroidType>();
+            services.AddScoped<HumanInputType>();
+            services.AddScoped<CharacterInterface>();
+            services.AddScoped<EpisodeEnum>();
+
+            services.AddScoped<StarWarsQuery>();
+            services.AddScoped<StarWarsMutation>();
             //  I believe we want the Schema to be scoped, so that on each request it instaniates
-            //  a new instance
+            //  a new instance of the schema
             services.AddScoped<ISchema, StarWarsSchema>();
 
             services.AddGraphQL(options => {
@@ -43,6 +59,8 @@ namespace StarWarsQL.DotNetApi
             .AddSystemTextJson()
             .AddUserContextBuilder(httpsContext => new GraphQLUserContext { User = httpsContext.User });
             //services.AddControllers();
+
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

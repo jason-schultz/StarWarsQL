@@ -1,14 +1,14 @@
 using System;
 using GraphQL;
 using GraphQL.Types;
-using StartWarsQL.DotNetCore.Logic;
+using StartWarsQL.DotNetCore.Logic.Interfaces;
 using StarWarsGL.DotNetApi.Types;
 
 namespace StarWarsQL.DotNetApi.GraphQL
 {
     public class StarWarsQuery : ObjectGraphType
     {
-        public StarWarsQuery(StarWarsLogic logic)
+        public StarWarsQuery(IStarWarsLogic logic)
         {
             Name = "Query";
 

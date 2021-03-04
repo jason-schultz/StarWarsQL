@@ -9,7 +9,7 @@ using StartWarsQL.DotNetCore.Entities;
 
 namespace StartWarsQL.DotNetCore.Data.Base
 {
-    public class BaseDao<T> : IBaseDao<T, string> where T : BaseEntity
+    public abstract class BaseDao<T> : IBaseDao<T, string> where T : BaseEntity
     {
 
         protected readonly IMongoDatabase _database;

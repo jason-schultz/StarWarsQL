@@ -1,12 +1,12 @@
 using GraphQL.Types;
 using StartWarsQL.DotNetCore.Entities;
-using StartWarsQL.DotNetCore.Logic;
+using StartWarsQL.DotNetCore.Logic.Interfaces;
 
 namespace StarWarsGL.DotNetApi.Types
 {
     public class HumanType : ObjectGraphType<Human>
     {
-        public HumanType(StarWarsLogic logic)
+        public HumanType(IStarWarsLogic logic)
         {
             Name = "Human";
 
