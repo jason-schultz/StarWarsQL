@@ -21,3 +21,7 @@ DotNetCore/[Rr]elease/
 DotNetCore/x64/
 DotNetCore/[Bb]in/
 DotNetCore/[Oo]bj/
+DotNetApi/obj/project.nuget.cache
+DotNetApi/obj/Debug/netcoreapp3.1/DotNetApi.assets.cache
+DotNetApi/obj/Debug/netcoreapp3.1/DotNetApi.csprojAssemblyReference.cache
+DotNetCore/obj/project.nuget.cache
