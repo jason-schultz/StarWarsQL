@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VNLs9IaB7ms/zbDI7g5meeb/SOBCRSbppfe6xKNZhEB7TsVybtqYbSwo9XfQC6HZZiPBQK+VC7HIzdDFvQxCQw==",
+  "dgSpecHash": "UdGcT44lml94ILxFkBkZ0gqQrfFt0nDBUW8Pl6pH84p5yENu1T4ezlBTfKd/u2WxW4hwp1jqBdVJQQP9+Iy/Vg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jasch\\source\\projects\\StarWarsQL\\DotNetCore\\DotNetCore.csproj",
+  "projectFilePath": "c:\\Users\\jasch\\source\\projects\\StarWarsQL\\DotNetCore\\DotNetCore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jasch\\.nuget\\packages\\dnsclient\\1.3.1\\dnsclient.1.3.1.nupkg.sha512",
     "C:\\Users\\jasch\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",
