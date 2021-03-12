@@ -26,3 +26,6 @@ NodeApi/node_modules
 NodeApi/build/src/index.d.ts
 NodeApi/build/src/index.js
 NodeApi/build/src/index.js.map
+
+mongo-volume/*
+data/*

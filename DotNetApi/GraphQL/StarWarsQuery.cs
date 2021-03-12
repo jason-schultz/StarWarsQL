@@ -13,6 +13,9 @@ namespace StarWarsQL.DotNetApi.GraphQL
             Name = "Query";
 
             Field<CharacterInterface>("hero", resolve: context => logic.GetDroidByIdAsync("3"));
+            Field<HumanType>("humans", 
+                resolve: context => logic.RetrieveAllHumans()
+            );
             Field<HumanType>("human", 
             arguments: new QueryArguments(
                 new QueryArgument<NonNullGraphType<StringGraphType>> { Name = "id", Description = "id of human" }),

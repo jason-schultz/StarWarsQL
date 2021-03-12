@@ -59,7 +59,7 @@ namespace StartWarsQL.DotNetCore.Data.Base
 
         public Task<List<T>> RetrieveAllAsync()
         {
-            return _collection.Find(item => true).ToListAsync();
+            return Task.FromResult(new List<T>()); //_collection.Find(item => true).ToListAsync();
         }
 
         public Task<List<T>> RetrieveAllAsync(Expression<Func<T, bool>> condition, int? maxResult = null, bool? orderByDescending = null)

@@ -13,5 +13,7 @@ namespace StartWarsQL.DotNetCore.Logic.Interfaces
         Task<Human> GetHumanByIdAsync(string id);
 
         Task<Droid> GetDroidByIdAsync(string id);
+
+        Task<IEnumerable<Human>> RetrieveAllHumans();
     }
 }

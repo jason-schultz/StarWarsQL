@@ -27,6 +27,13 @@ namespace StartWarsQL.DotNetCore.Logic
             //return await Task.FromResult(_data.AddHuman(human));
         }
 
+        public async Task<IEnumerable<Human>> RetrieveAllHumans()
+        {
+            var humans = await _humanDao.RetrieveAllAsync();
+
+            return humans;
+        }
+
         public async Task<IEnumerable<StarWarsCharacter>> GetFriends(StarWarsCharacter character)
         {
             if(character == null)
